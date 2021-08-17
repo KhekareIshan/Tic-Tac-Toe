@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tictactoe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tic Tac Toe</title>
+    <script src="tictactoe.js"></script>
+</head>
+<body style="background-color: black; overflow-x: hidden;" onload="play()">
+    <center>
+        <font style="color: #fff;">Tic Tac Toe</font>
+        <hr>
+        <table id="grid">
+            <tr>
+                <td><button class="button2" id="button1" data-number="1" style="border-left:none; border-top: none" onclick="play(1); win(); cpu();" type="button"></button></td>
+                <td><button class="button2" id="button2" data-number="2" style="border-top: none" onclick="play(2); win(); cpu();" type="button"></button></td>
+                <td><button class="button2" id="button3" data-number="3" style="border-right:none; border-top: none" onclick="play(3); win(); cpu();" type="button"></button></td>
+            </tr>
+            <tr>
+                <td><button class="button2" id="button4" data-number="4" style="border-left:none;" onclick="play(4); win(); cpu();" type="button"></button></td>
+                <td><button class="button2" id="button5" data-number="5" onclick="play(5); win(); cpu();" type="button"></button></td>
+                <td><button class="button2" id="button6" data-number="6" style="border-right:none;" onclick="play(6); win(); cpu();" type="button"></button></td>
+            </tr>
+            <tr>
+                <td><button class="button2" id="button7" data-number="7" style="border-left:none; border-bottom: none" onclick="play(7); win(); cpu();" type="button"></button></td>
+                <td><button class="button2" id="button8" data-number="8" style="border-bottom: none" onclick="play(8); win(); cpu();" type="button"></button></td>
+                <td><button class="button2" id="button9" data-number="0" style="border-right:none; border-bottom: none" onclick="play(9); win(); cpu();" type="button"></button></td>
+            </tr>
+        </table>
+        <hr>
+    </center>
+    <button class="button" style="top: 100px;" onclick="restart()"><span class="fa fa-repeat">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Restart</span></button>
+    <button class="button" style="top: 200px;" onclick="score()"><span class="fa fa-bar-chart">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Score</span></button>
+    <button class="button" style="top: 300px;" onclick="selectp()"><span class="fa fa-male">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Players</span></button>
+    <button class="button" style="top: 400px;" onclick="more()"><span class="fa fa-bookmark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More</span></button>
+    <center>
+    <font id="message3"><font id="message4">Turn: </font><font id="message"></font><font id="message5"> Players: </font><font id="message2"></font></font>
+</center>
+<table border="1" style="position: absolute; top: 250px; left: 50px; border-color: #ffffff90; visibility: hidden; width: auto;" id="scoretab" cellpadding="7px" >
+    <tr>
+        <th style="color: #fff;"><font style="font-size: 30px;">Score: P1</font></th>
+        <th style="color: #fff;"><font id="heading" style="font-size: 30px;">Score: P2</font></th>
+    </tr>
+    <tr>
+        <td><font style="font-size: 30px;" id="xtab"></font></td>
+        <td><font style="font-size: 30px;" id="otab"></font></td>
+    </tr>
+</table>
+<button class="button3" id="calc" type="button" style="position: absolute; top: 200px; visibility: hidden;" onclick="window.open('C:/Users/Ishan/Documents/ishan/html/calculator.html')">calculator</button>
+<button class="button3" id="mark" type="button" style="position: absolute; top: 300px; visibility: hidden;" onclick="window.open('C:/Users/Ishan/Documents/ishan/html/marksheet.html')">Mark Sheet</button>
+<button class="button3" id="car" type="button" style="position: absolute; top: 400px; visibility: hidden;" onclick="window.open('C:/Users/Ishan/Documents/ishan/html/car.html')">Car Register</button>
+<button class="button3" id="2p" type="button" style="position: absolute; top: 250px; visibility: hidden;" onclick="player('2');">2 Players</button>
+<button class="button3" id="cpu" type="button" style="position: absolute; top: 350px; visibility: hidden;" onclick="player('c')">CPU</button>
+</body>
+</html>
+
+<!-- the end -->
