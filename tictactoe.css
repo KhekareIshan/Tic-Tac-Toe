@@ -1,3 +1,6 @@
+body{
+overflow-y: none;
+}
 .button2[type=button]{
 	/* background styles */
 	position: relative;
