@@ -1,5 +1,6 @@
 body{
 overflow-y: hidden;
+overflow-x: hidden;
 }
 .button2[type=button]{
 	/* background styles */
