@@ -312,6 +312,7 @@ function cpu(){
         option = answer[random]
         if (players == "cpu") {
             cpu2();
+            m.innerHTML = "X";
         }
         console.log(option)
         // alert(option)
@@ -751,6 +752,7 @@ var button9 = document.getElementById("button9");
     }
     }
     }
+    m.innerHTML = "X"
 }
 function player(i){
     var m = document.getElementById("message");
